@@ -81,8 +81,8 @@ while True:
         else:
             xrp = get_balance("XRP")
             day_price = get_day_target("KRW-XRP", 1.125)
-            if xrp > 101 or current_price == day_price:
-                sell_result = upbit.sell_market_order("KRW-XRP", xrp*0.995 - 100)
+            if xrp > 1 or current_price == day_price:
+                sell_result = upbit.sell_market_order("KRW-XRP", xrp*0.995)
                 post_message(myToken,"#crypto", "XRP sell : " +str(sell_result))
         time.sleep(1)
     except Exception as e:
